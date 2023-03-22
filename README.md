@@ -1,5 +1,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/teg79s6smq2hbjpj/branch/main?svg=true)](https://ci.appveyor.com/project/marinaustinovich/ahj-homeworks-testing/branch/main)
 
+deployment: https://marinaustinovich.github.io/ahj-homeworks-testing/
+
 ### Credit Card Validator
 
 #### Легенда
