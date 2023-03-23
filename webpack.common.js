@@ -1,11 +1,14 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // eslint-disable-line import/no-extraneous-dependencies
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   target: 'web',
   devtool: 'inline-source-map',
+  devServer: {
+    port: 9000,
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: (pathData) => {

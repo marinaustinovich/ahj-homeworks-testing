@@ -8,6 +8,9 @@ const TerserPlugin = require('terser-webpack-plugin'); // eslint-disable-line im
 module.exports = {
   target: 'web',
   devtool: 'source-map',
+  devServer: {
+    port: 9000,
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: (pathData) => {

@@ -64,7 +64,7 @@ td {
 
 .icons {
   position: relative;
-  width: 50%;
+  width: 90%;
   margin: auto;
 }
 
@@ -196,6 +196,7 @@ td {
   background-color: #f38a8a;
   border-color: #f38a8a;
 }
+
 @media (min-width: 768px) {
   .form-inline .form-group {
     display: inline-block;
