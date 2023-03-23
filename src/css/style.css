@@ -64,12 +64,12 @@ td {
 
 .icons {
   position: relative;
-  width: 90%;
   margin: auto;
 }
 
 .cards {
-  margin: 10px 0;
+  width: 50%;
+  margin: 10px auto;
   height: 25px;
   padding-left: 25%;
   list-style: none;
