@@ -1,3 +1,10 @@
+import visaElectron from '../../../img/visa_electron_curved.png';
+import MasterCard from '../../../img/mastercard_curved.png';
+import AmexCard from '../../../img/credit_card_amex.png';
+import DiscoverCard from '../../../img/discover_straight_32px.png';
+import MirCard from '../../../img/mir_card.png';
+import DinersClubCard from '../../../img/diners_club_card.png';
+
 import './card-list.css';
 
 export default class CardsList {
@@ -8,12 +15,12 @@ export default class CardsList {
 
     this.container = container;
     this.cards = [
-      { class: 'visa', title: 'Visa', label: 'Visa' },
-      { class: 'master', title: 'Mastercard', label: 'Mastercard' },
-      { class: 'amex', title: 'American Express', label: 'American Express' },
-      { class: 'discover', title: 'Discover', label: 'Discover' },
-      { class: 'mir', title: 'Mir', label: 'Мир' },
-      { class: 'diners_club', title: 'Diners Club', label: 'Diners Club' },
+      { class: 'visa', title: 'Visa', url: visaElectron },
+      { class: 'master', title: 'Mastercard', url: MasterCard },
+      { class: 'amex', title: 'American Express', url: AmexCard },
+      { class: 'discover', title: 'Discover', url: DiscoverCard },
+      { class: 'mir', title: 'Mir', url: MirCard },
+      { class: 'diners_club', title: 'Diners Club', url: DinersClubCard },
     ];
   }
 
@@ -23,15 +30,17 @@ export default class CardsList {
 
   get markup() {
     return `
-      <ul class="cards">
+      <div class="cards">
         ${this.cards
     .map(
       (card) => `
-          <li><span class="card ${card.class}" title="${card.title}">${card.label}</span></li>
+        <div>
+          <img class="card ${card.class}" src=${card.url} alt="${card.title}">
+        </div>  
         `,
     )
     .join('')}
-      </ul>
+      </div>
     `;
   }
 }

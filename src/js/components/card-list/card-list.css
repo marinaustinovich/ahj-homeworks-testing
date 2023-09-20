@@ -1,19 +1,12 @@
 .cards {
   display: flex;
   gap: 4px;
-  width: 30%;
-  margin: auto;
-  height: 25px;
-  list-style: none;
+  justify-content: center;
 }
 
 .card {
-  display: block;
   width: 55px;
   height: 35px;
-  text-indent: -9999px;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
   border: 1px solid grey;
   filter: grayscale(1);
 }
@@ -21,28 +14,4 @@
 .card-active {
   filter: grayscale(0);
   border: 2px solid rgb(21, 18, 230);
-}
-
-.card.visa {
-  background-image: url(../../../img/visa_electron_curved.png);
-}
-
-.card.master {
-  background-image: url(../../../img/mastercard_curved.png);
-}
-
-.card.discover {
-  background-image: url(../../../img/discover_straight_32px.png);
-}
-
-.card.amex {
-  background-image: url(../../../img/credit_card_amex.png);
-}
-
-.card.mir {
-  background-image: url(../../../img/mir_card.png);
-}
-
-.card.diners_club {
-  background-image: url(../../../img/diners_club_card.png);
 }
