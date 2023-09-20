@@ -1,8 +1,8 @@
+### Credit Card Validator
+
 [![Build status](https://ci.appveyor.com/api/projects/status/teg79s6smq2hbjpj/branch/main?svg=true)](https://ci.appveyor.com/project/marinaustinovich/ahj-homeworks-testing/branch/main)
 
 deployment: https://marinaustinovich.github.io/ahj-homeworks-testing/
-
-### Credit Card Validator
 
 #### Легенда
 
@@ -14,7 +14,7 @@ deployment: https://marinaustinovich.github.io/ahj-homeworks-testing/
 
 Скриншот взят с [сайта](http://www.validcreditcardnumber.com).
 
-Вам нужно провести исследовательскую работу и выяснить, на базе чего определяется, какой платёжной системе принадлежит определённая карта (не забыдь о «Мире»).
+Вам нужно провести исследовательскую работу и выяснить, на базе чего определяется, какой платёжной системе принадлежит определённая карта (не забудь о «Мире»).
 
 #### Описание
 
@@ -26,8 +26,6 @@ deployment: https://marinaustinovich.github.io/ahj-homeworks-testing/
 
 Автотесты на функции проверки номера карты и принадлежности к определённой платёжной системе.
 
-Убедитесь, что всё работает при прогоне тестов в AppVeyor.
-
 **Для поиска изображений использовался сервис [findicons.com](https://findicons.com)**.
 
 ---
@@ -35,12 +33,12 @@ deployment: https://marinaustinovich.github.io/ahj-homeworks-testing/
 ### Puppeteer
 
 Подключен Puppeteer и проверено взаимодействие для двух различных вариантов:
+
 1. Ввод валидного номера карты.
 1. Ввод невалидного номера карты.
 
 ---
 
-### JSDOM 
+### JSDOM
 
-
-Подключите JSDOM и реализованва проверк с использованием `jest.each`.
+Подключите JSDOM и реализуйте проверку с использованием `jest.each`.

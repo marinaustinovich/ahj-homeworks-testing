@@ -15,6 +15,6 @@ test.each([
   ['no-found for 7********', '7712344200344113', 'no-found'],
   ['no-found for 8********', '8712344112343003', 'no-found'],
   ['no-found for 9*********', '975700000000816', 'no-found'],
-])(('it should be %s'), (_, input, expected) => {
+])('it should be %s', (_, input, expected) => {
   expect(findPaymentSystem(input)).toBe(expected);
 });

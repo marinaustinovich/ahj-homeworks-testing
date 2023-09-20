@@ -1,6 +1,8 @@
-import Validator from './bindToDOM/Validator';
+import Validator from './components/validator/Validator';
 
 /* eslint-disable */
-console.log('it works!');
-const validator = new Validator();
-validator.bindToDOM(document.querySelector('#card-validator-container'));
+console.log("it works!");
+
+const container = document.querySelector("#card-validator-container");
+const validator = new Validator(container);
+validator.bindToDOM();
