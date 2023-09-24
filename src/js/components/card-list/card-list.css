@@ -5,8 +5,8 @@
 }
 
 .card {
-  width: 55px;
-  height: 35px;
+  width: 85px;
+  height: 55px;
   border: 1px solid grey;
   filter: grayscale(1);
 }

@@ -34,13 +34,8 @@ describe('CheckForm', () => {
       const formElement = container.querySelector(CheckForm.selector);
       expect(formElement).not.toBeNull();
       expect(formElement.querySelector(CheckForm.inputSelector)).not.toBeNull();
-      expect(
-        formElement.querySelector(CheckForm.submitSelector),
-      ).not.toBeNull();
-      expect(formElement.querySelector(CheckForm.resetSelector)).not.toBeNull();
-      expect(
-        formElement.querySelector(CheckForm.messageSelector),
-      ).not.toBeNull();
+      expect(formElement.querySelector(CheckForm.submitSelector)).not.toBeNull();
+      expect(formElement.querySelector(CheckForm.messageSelector)).not.toBeNull();
     });
 
     test('shows message for invalid card input', () => {
@@ -58,25 +53,5 @@ describe('CheckForm', () => {
       expect(input.classList.contains('invalid')).toBeFalsy();
       expect(message.classList.contains('hidden')).toBeFalsy();
     });
-
-    test('reset for valid card input', () => {
-      const reset = container.querySelector(CheckForm.resetSelector);
-      input.value = '30569309025904';
-      reset.click();
-
-      expect(message.classList.contains('valid')).toBeFalsy();
-      expect(input.value).toBe('');
-    });
-
-    test('reset for invalid card input', () => {
-      const reset = container.querySelector(CheckForm.resetSelector);
-      input.value = '1234567890';
-      reset.click();
-
-      expect(message.classList.contains('invalid')).toBeFalsy();
-      expect(input.value).toBe('');
-    });
-
-    // а также проверить поведение кнопки сброса.
   });
 });

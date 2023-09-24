@@ -11,28 +11,23 @@ export default class CheckForm {
     this.container = container;
 
     this.onSubmit = this.onSubmit.bind(this);
-    this.onReset = this.onReset.bind(this);
+    this.onInputChange = this.onInputChange.bind(this);
   }
 
   bindToDOM() {
     this.container.innerHTML = CheckForm.markup;
 
     const {
-      selector,
-      messageSelector,
-      submitSelector,
-      inputSelector,
-      resetSelector,
+      selector, messageSelector, submitSelector, inputSelector,
     } = CheckForm;
 
     this.element = this.container.querySelector(selector);
     this.message = this.element.querySelector(messageSelector);
     this.submit = this.element.querySelector(submitSelector);
     this.input = this.element.querySelector(inputSelector);
-    this.reset = this.element.querySelector(resetSelector);
 
     this.element.addEventListener('submit', this.onSubmit);
-    this.reset.addEventListener('click', this.onReset);
+    this.input.addEventListener('input', this.onInputChange);
   }
 
   onSubmit(e) {
@@ -54,15 +49,12 @@ export default class CheckForm {
     }
   }
 
-  onReset() {
-    this.input.value = '';
+  onInputChange() {
     this.input.classList.remove('invalid', 'valid');
-
     const activeCard = document.querySelector('.card-active');
     if (activeCard) {
       activeCard.classList.remove('card-active');
     }
-
     this.hideMessage();
   }
 
@@ -76,13 +68,12 @@ export default class CheckForm {
 
   static get markup() {
     return `
-      <form id="form" class="form-inline">
+      <form id="form" class="form">
           <div class="form-group">
               <input class="form-control" id="card_number" name="card_number" type="text" placeholder="Credit card number" data-original-title="" title="">
           </div>
           <div class='button-wrapper'>
             <button class="submit">Click to Validate</button>
-            <button class="reset" type='button'>Reset form</button>
           </div> 
           <span class="message hidden">Упсс! Платежной системы нет в базе</span>
       </form>
@@ -90,7 +81,7 @@ export default class CheckForm {
   }
 
   static get selector() {
-    return '.form-inline';
+    return '.form';
   }
 
   static get messageSelector() {
@@ -103,9 +94,5 @@ export default class CheckForm {
 
   static get inputSelector() {
     return '.form-control';
-  }
-
-  static get resetSelector() {
-    return '.reset';
   }
 }

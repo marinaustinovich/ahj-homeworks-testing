@@ -1,21 +1,17 @@
-.form-inline {
+.form {
   position: relative;
-  display: grid;
+  display: flex;
   gap: 40px;
-  width: 60%;
-  margin: auto;
 }
 
 .form-control {
   display: block;
-  width: 100%;
-  height: 40px;
+  height: 50px;
   padding: 0 25px;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 1.42857143;
   color: #555;
   background-color: #fff;
-  background-image: none;
   border: 1px solid #ccc;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -26,12 +22,11 @@
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 
-.form-inline button {
-  width: 140px;
+.form button {
   padding: 6px 10px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
-  line-height: 1.42857143;
+  line-height: 1.9;
   cursor: pointer;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -39,9 +34,14 @@
   border-color: #bdd891;
 }
 
+.form button:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}
+
 .valid {
   color: #fff;
-  background-color: #94df94;
+  background-color: #83df83;
   border-color: #4cae4c;
 }
 
@@ -51,20 +51,17 @@
   border-color: #c91212;
 }
 
-.form-inline .reset {
-  background-color: #f38a8a;
-  border-color: #f38a8a;
-}
-
 .message {
   position: absolute;
-  bottom: 40px;
+  bottom: -45px;
+  width: 100%;
   left: 50%;
   transform: translateX(-50%);
-  border: 2px solid #b73030;
+  border: 6px solid #bb1f1f;
   padding: 5px;
   border-radius: 5px;
   background-color: #fdfbf8;
+  font-size: 18px;
 }
 
 .hidden {
@@ -72,13 +69,13 @@
 }
 
 @media (min-width: 768px) {
-  .form-inline .form-group {
+  .form .form-group {
     display: inline-block;
     margin-bottom: 0;
     vertical-align: middle;
   }
 
-  .form-inline .form-control {
+  .form .form-control {
     display: inline-block;
     width: auto;
     vertical-align: middle;

@@ -29,7 +29,7 @@ describe('Widget', () => {
   describe('bindToDOM', () => {
     test.each([
       [Widget.cardsSelector, 'cards'],
-      [Widget.formSelector, 'form-inline'],
+      [Widget.formSelector, 'form'],
     ])('creates and binds %s to DOM', (selector, className) => {
       const widget = new Widget(container);
       widget.bindToDOM();

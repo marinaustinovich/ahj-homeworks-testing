@@ -7,7 +7,7 @@
     "start": "webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "lint": "eslint .",
-    "test": "jest --testPathPattern=./src/",
+    "test": "jest --testPathPattern=./src/ --env=jsdom",
     "coverage": "jest --testPathPattern=./src/ --coverage",
     "e2e": "jest --clearCache && jest --testPathPattern=./e2e/ --runInBand --detectOpenHandles",
     "preshow:coverage": "npm run coverage",

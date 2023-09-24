@@ -24,7 +24,7 @@ describe('Credit Card Validator form', () => {
   test('Validator should render on page start', async () => {
     await page.goto(baseUrl);
 
-    await page.waitFor('#form');
+    await page.waitForSelector('#form');
   });
 
   test('should add .valid  and .card-active class for valid  and found card', async () => {
